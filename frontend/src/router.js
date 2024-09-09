@@ -10,7 +10,7 @@ const AboutPage = lazy(() => import("./pages/About.jsx"))
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <Root/>,
+        element: <Root />,
         children: [
             {
                 path: "/",
@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
                 element: <WorksPage />
             },
             {
-                path: "/acounts",
+                path: "/accounts",
                 element: <AccountsPage />
             },
             {

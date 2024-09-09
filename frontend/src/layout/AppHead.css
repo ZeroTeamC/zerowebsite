@@ -1,79 +1,73 @@
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltip .tooltiptext {
-    margin: 51px;
-    margin-left: 0px;
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-
-    position: absolute;
-    z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
 header {
-    border-bottom: 3px solid rgb(00, 70, 200);
-    justify-content: right;
+    padding: .5rem;
     width: 100%;
-    background-color: #333333;
-    z-index: 999;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+nav {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: .2rem 1rem;
+    height: 2.5rem;
+    direction: rtl;
+    color: var(--primary-text);
+    gap: 1rem;
+    align-items: center;
+}
+
+nav ul {
     display: flex;
 }
 
-header * {
-    color: white;
+.routes {
+    gap: 1rem;
+    width: 100%;
 }
 
-.items_container {
-    margin-right: 100px;
+.nav-link {
+    position: relative;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.item {
-    transition: 0.1s ease-in;
-    margin: 20px;
+.nav-link-item {
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    transition: transform 100ms;
+    color: #939393;
 }
 
-.item:hover {
-    transform: scale(1.1);
+.nav-link-item.active {
+    color: #474747;
 }
 
-.logo {
-    margin-left: 2px;
-    margin-right: 10px;
-    width: 50px;
-    height: 50px;
-    margin-top: 15px;
+.nav-link-item:hover {
+    color: #6b6b6b;
 }
 
-@media only screen and (max-width: 600px) {
-    .item {
-        margin: 10px;
-    }
+.nav-logo {
+    height: 100%;
+    border-radius: .5rem;
+    border: #474747 solid 1px;
+}
 
-    .items_container {
-        margin-right: 5px;
-    }
+nav .links {
+    height: 100%;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+}
 
-    header {
-        position: relative;
-    }
+nav .links .nav-social {
+    height: 100%;
+}
 
-    .logo {
-        margin-top: 20px;
-        margin-right: 5px;
-        width: 25px;
-        height: 25px;
-        display: none;
-    }
+nav .links .nav-social img {
+    height: 50%;
+    margin: auto 0;
 }
