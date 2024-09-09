@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .body{
     padding: 5% 0;
     justify-items: center;
@@ -12,6 +13,14 @@
   }
   
   .tooltip .tooltiptext {
+=======
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+>>>>>>> 57451d8 (adding react-router-dom and helmet libraries, and refactoring the code)
     margin: 51px;
     margin-left: 0px;
     visibility: hidden;
@@ -21,6 +30,7 @@
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
+<<<<<<< HEAD
   
     position: absolute;
     z-index: 1;
@@ -29,3 +39,13 @@
   .tooltip:hover .tooltiptext {
     visibility: visible;
   }
+=======
+
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+>>>>>>> 57451d8 (adding react-router-dom and helmet libraries, and refactoring the code)
