@@ -8,11 +8,8 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
-=======
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.26.1",
->>>>>>> 57451d8 (adding react-router-dom and helmet libraries, and refactoring the code)
     "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
