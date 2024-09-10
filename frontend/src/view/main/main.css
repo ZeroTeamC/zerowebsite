@@ -1,35 +1,51 @@
-.bigTitle{
-    font-size:150px;
+.bigTitle {
+    font-size: 150px;
     background: linear-gradient(to right, rgb(0, 166, 255), rgb(226, 6, 255));
     -webkit-background-clip: text;
     color: transparent;
 }
-.subMsg{
-    margin-top:0px;
-    color: rgb(161,161,170);
-}   
-.body{
+
+.subMsg {
+    margin-top: 0px;
+    color: rgb(161, 161, 170);
+}
+
+.body {
     padding: 5% 0;
     justify-items: center;
     text-align: center;
     position: relative;
 }
-.p{
-    font-size:20px;
+
+.p {
+    font-size: 20px;
 }
-.nvlink{
+
+.nvlink {
+    display: inline-block;
     text-decoration: none;
+    transition: all 200ms;
 }
-.pages{
-    margin-top:15px;
+
+.nvlink:hover {
+    transform: scale(1.05);
 }
-.icon{
-    margin-left:15px;
-    width:50px;
+
+.pages {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.icon {
+    margin-left: 15px;
+    width: 50px;
     height: 50px;
 }
+
 @media only screen and (max-width: 600px) {
-    .bigTitle{
+    .bigTitle {
         font-size: 75px;
     }
 }

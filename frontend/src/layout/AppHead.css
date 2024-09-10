@@ -21,9 +21,72 @@ nav ul {
     display: flex;
 }
 
+nav .nav-btn {
+    display: inline-flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 0.5rem;
+    border: none;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+nav .nav-btn span {
+    display: inline-block;
+    background-color: #000;
+    width: 100%;
+    padding: 0.1rem;
+    border-radius: 50px;
+}
+
+.nav-drawer {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 100ms;
+    height: 100vh;
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0 0 0.5rem #eee;
+    z-index: 999;
+}
+
+.nav-drawer.active {
+    transform: translateX(0%);
+}
+
+.nav-drawer .head {
+    display: inline-block;
+    direction: ltr;
+    width: 100%;
+    height: 20%;
+    border-bottom: 1px black solid;
+    padding: 1rem;
+}
+
+.nav-drawer .nav-logo {
+    width: 8rem;
+    aspect-ratio: 1 / 1;
+}
+
+.nav-drawer .links-- {
+    margin-top: 2rem;
+}
+
+.nav-drawer .routes {
+    flex-direction: column;
+}
+
 .routes {
     gap: 1rem;
     width: 100%;
+}
+
+.routes.md .nav-link-item {
+    font-size: .8rem;
 }
 
 .nav-link {
@@ -31,6 +94,8 @@ nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 5;
+    color: #939393;
 }
 
 .nav-link-item {
@@ -49,6 +114,30 @@ nav ul {
     color: #6b6b6b;
 }
 
+.routes.lg .nav-link:after {
+    content: attr(data-desc);
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-200%);
+    width: 100%;
+    transition: ease-in all 100ms;
+    opacity: 0%;
+    z-index: -1;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    width: max-content;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: inherit;
+}
+
+.routes.lg .nav-link:hover::after {
+    transform: translateX(-50%);
+    opacity: 100%;
+}
+
 .nav-logo {
     height: 100%;
     border-radius: .5rem;
@@ -60,7 +149,7 @@ nav .links {
     width: 100%;
     justify-content: end;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 nav .links .nav-social {

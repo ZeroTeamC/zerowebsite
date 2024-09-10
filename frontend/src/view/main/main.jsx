@@ -2,8 +2,9 @@ import "./main.css"
 import aboutImg from "./res/about.png";
 import communityImg from "./res/community.png";
 import worksImg from "./res/works.png";
-import { NavLink, Link } from "react-router-dom";
-import Lottie from 'lottie-react';
+import { NavLink } from "react-router-dom";
+
+
 export default function Main_page() {
     return (
         <div className="body">
