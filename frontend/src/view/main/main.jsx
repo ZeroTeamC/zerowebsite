@@ -4,7 +4,6 @@ import communityImg from "./res/community.png";
 import worksImg from "./res/works.png";
 import { NavLink, Link } from "react-router-dom";
 import Lottie from 'lottie-react';
-import computerAnimation from "./res/computer.json";
 export default function Main_page() {
     return (
         <div className="body">
