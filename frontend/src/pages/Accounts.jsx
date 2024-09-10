@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet";
 
-import AboutView from "../view/about.jsx";
+import AccountsView from "../view/accounts.jsx";
 
 export default function Accounts() {
     return (
@@ -8,7 +8,7 @@ export default function Accounts() {
             <Helmet>
                 <title>Accounts</title>
             </Helmet>
-            <AboutView />
+            <AccountsView/>
         </>
     )
 }

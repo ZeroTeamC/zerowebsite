@@ -1,0 +1,35 @@
+.bigTitle{
+    font-size:150px;
+    background: linear-gradient(to right, rgb(0, 166, 255), rgb(226, 6, 255));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.subMsg{
+    margin-top:0px;
+    color: rgb(161,161,170);
+}   
+.body{
+    padding: 5% 0;
+    justify-items: center;
+    text-align: center;
+    position: relative;
+}
+.p{
+    font-size:20px;
+}
+.nvlink{
+    text-decoration: none;
+}
+.pages{
+    margin-top:15px;
+}
+.icon{
+    margin-left:15px;
+    width:50px;
+    height: 50px;
+}
+@media only screen and (max-width: 600px) {
+    .bigTitle{
+        font-size: 75px;
+    }
+}
