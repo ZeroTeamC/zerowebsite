@@ -6,7 +6,7 @@ export default function Main_page() {
     return (
         <>
             <Helmet>
-                <title>Main</title>
+                <title>فريق صفر</title>
             </Helmet>
             <MainView />
         </>

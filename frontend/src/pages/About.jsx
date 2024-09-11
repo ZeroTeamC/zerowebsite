@@ -4,7 +4,7 @@ export default function About() {
     return (
         <>
             <Helmet>
-                <title>Accounts</title>
+                <title>عنا</title>
             </Helmet>
             <AboutView/>
         </>
