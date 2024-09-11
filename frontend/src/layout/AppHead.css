@@ -5,6 +5,10 @@ header {
     background-color: #fff;
 }
 
+header.active {
+    box-shadow: 0 0 1.5rem #ccc;
+}
+
 nav {
     display: flex;
     width: 80%;

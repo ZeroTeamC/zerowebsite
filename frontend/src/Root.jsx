@@ -12,10 +12,11 @@ export default function Root() {
     const sm = useMediaQuery("(max-width: 640px)");
     const md = useMediaQuery("(max-width: 835px)");
     const lg = useMediaQuery("(width >= 900px)");
+
     return (
         <Responsive.Provider value={{ sm, md, lg }}>
             <div className="page-root">
-                <AppHead />
+                <AppHead active />
                 <div className="main-body" style={{ color: 'black' }}>
                     <Suspense>
                         <Outlet />

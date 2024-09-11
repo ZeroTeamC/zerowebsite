@@ -58,7 +58,7 @@ function LinkThing({ logo, href }) {
     );
 }
 
-export default function AppHead() {
+export default function AppHead({ active }) {
     const currentBreakPoint = useResponsive(Responsive);
     const [tabOpen, setTabOpen] = useState(false);
     console.log(tabOpen);
@@ -94,7 +94,7 @@ export default function AppHead() {
     }
 
     return (
-        <header>
+        <header className={active ? "active" : ""}>
             <nav>
                 <If condition={currentBreakPoint === "sm"}>
                     <Then>
