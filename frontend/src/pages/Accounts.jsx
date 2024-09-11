@@ -6,7 +6,7 @@ export default function Accounts() {
     return (
         <>
             <Helmet>
-                <title>Accounts</title>
+                <title>حسابات الفريق</title>
             </Helmet>
             <AccountsView/>
         </>
