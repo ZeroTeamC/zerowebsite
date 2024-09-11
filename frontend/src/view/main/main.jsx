@@ -1,4 +1,4 @@
-import "./main.css"
+import classes from "./main.module.css"
 import aboutImg from "./res/about.png";
 import communityImg from "./res/community.png";
 import worksImg from "./res/works.png";
@@ -7,20 +7,20 @@ import { NavLink } from "react-router-dom";
 
 export default function Main_page() {
     return (
-        <div className="body">
-            <h1 className="bigTitle">فريق صفر</h1>
+        <div className={classes.body}>
+            <h1 className={classes.bigTitle}>فريق صفر</h1>
             <div>
-                <p className="subMsg">مكان حيث تتحول الافكار الى برامج كمبيوتر تفاعلية</p>
+                <p className={classes.subMsg}>مكان حيث تتحول الافكار الى برامج كمبيوتر تفاعلية</p>
             </div>
-            <div className="pages">
-                <NavLink className="nvlink" to="/accounts">
-                    <img className="icon" src={communityImg}></img>
+            <div className={classes.pages}>
+                <NavLink className={classes.nvlink} to="/accounts">
+                    <img className={classes.icon} src={communityImg}></img>
                 </NavLink>
-                <NavLink className="nvlink" to="/about">
-                    <img className="icon" src={aboutImg}></img>
+                <NavLink className={classes.nvlink} to="/about">
+                    <img className={classes.icon} src={aboutImg}></img>
                 </NavLink>
-                <NavLink className="nvlink" to="/works">
-                    <img className="icon" src={worksImg}></img>
+                <NavLink className={classes.nvlink} to="/works">
+                    <img className={classes.icon} src={worksImg}></img>
                 </NavLink>
             </div>
         </div>

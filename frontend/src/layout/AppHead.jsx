@@ -19,23 +19,20 @@ const pages = [
     {
         displayName: "الحسابات",
         href: "accounts/",
-        discription: "حسابات الفريق و وسائل التواصل لهم",
     },
     {
         displayName: "أعمالنا",
         href: "works/",
-        discription: "أعمال الفريق المفتوحة المصدر على github",
     },
     {
         displayName: "حول الفريق",
         href: "about/",
-        discription: "معلومات حول الفريق و من نحن",
     },
 ];
 
-export function _NavLink({ name, href, discription }) {
+export function _NavLink({ name, href }) {
     return (
-        <li className="nav-link" data-desc={discription}>
+        <li className="nav-link" >
             <NavLink
                 to={href}
                 className={({ isActive }) =>
@@ -69,7 +66,6 @@ export default function AppHead({ active }) {
                 <_NavLink
                     name={displayName}
                     href={href}
-                    discription={discription}
                     key={key}
                 />
             ))}
