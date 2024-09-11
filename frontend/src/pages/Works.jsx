@@ -6,7 +6,7 @@ export default function Works() {
     return (
         <>
             <Helmet>
-                <title>Works</title>
+                <title>اعمالنا</title>
             </Helmet>
             <WorksView />
         </>
