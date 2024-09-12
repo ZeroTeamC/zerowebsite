@@ -2,14 +2,14 @@ import Image from "../../components/Image.jsx"
 import { If, Then } from "react-if";
 import Icons from "../../components/Icons.jsx";
 
-import "./style.css";
+import classes from "./style.module.css";
 
 export function AccountCard({ photo, github, twitter, reddit, discord }) {
     return (
-        <div className="account-card">
-            <Image src={photo} className="card-photo" />
-            <div className="card-links">
-                <div className="links----" style={github && (!(twitter || reddit)) ? { justifyContent: "start" } : {}}>
+        <div className={classes.acount_card}>
+            <Image src={photo} className={classes.card_photo} />
+            <div className={classes.card_links} >
+                <div className={classes.links_} style={github && (!(twitter || reddit)) ? { justifyContent: "start" } : {}}>
                     <If condition={github}>
                         <Then>
                             <a href={new URL(github, "https://github.com/")}>
@@ -34,7 +34,7 @@ export function AccountCard({ photo, github, twitter, reddit, discord }) {
                 </div>
                 <If condition={discord}>
                     <Then>
-                        <span className="account-discord">
+                        <span className={classes.account_discord}>
                             @{discord}
                         </span>
                     </Then>
@@ -85,7 +85,7 @@ export default function AccountsView() {
         </ul>
     )
     return (
-        <div class="body">
+        <div className={classes.body}>
             <heading>
                 تريد الإنضمام؟
                 <a href="">إنضم عن طريق الديسكورد</a>
