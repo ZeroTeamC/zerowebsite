@@ -3,10 +3,12 @@ import { If, Then } from "react-if";
 import Icons from "../../components/Icons.jsx";
 
 import classes from "./style.module.css";
+import { useResponsive } from "../../hooks/useResponsive.jsx";
+import { Responsive } from "../../Root.jsx";
 
 export function AccountCard({ photo, github, twitter, reddit, discord }) {
     return (
-        <div className={classes.acount_card}>
+        <div className={classes.account_card}>
             <Image src={photo} className={classes.card_photo} />
             <div className={classes.card_links} >
                 <div className={classes.links_} style={github && (!(twitter || reddit)) ? { justifyContent: "start" } : {}}>
@@ -75,6 +77,7 @@ const DEVELOPERS = [
 ]
 
 export default function AccountsView() {
+    const screenType = useResponsive(Responsive);
     const devs = (
         <ul>
             {DEVELOPERS.map((dev, key) => (
@@ -91,7 +94,7 @@ export default function AccountsView() {
                 <a href="">إنضم عن طريق الديسكورد</a>
             </heading>
             <div>
-                <h3>
+                <h3 className={screenType === "sm" ? classes.h3_sm : ""}>
                     مبرمجي الفريق
                 </h3>
                 {devs}

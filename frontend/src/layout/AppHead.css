@@ -118,30 +118,6 @@ nav .nav-btn span {
     color: #6b6b6b;
 }
 
-.routes.lg .nav-link:after {
-    content: attr(data-desc);
-    display: inline-block;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-200%);
-    width: 100%;
-    transition: ease-in all 100ms;
-    opacity: 0%;
-    z-index: -1;
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.5rem;
-    width: max-content;
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: inherit;
-}
-
-.routes.lg .nav-link:hover::after {
-    transform: translateX(-50%);
-    opacity: 100%;
-}
-
 .nav-logo {
     height: 100%;
     border-radius: .5rem;

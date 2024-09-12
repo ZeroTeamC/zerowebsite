@@ -4,7 +4,7 @@ import TeamLogo from "../assets/zero-team-logo.jpg";
 import GithubLogo from "../assets/github-logo-light.png";
 import DiscordLogo from "../assets/discord-logo.png";
 
-import { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { useResponsive } from "../hooks";
 import { Responsive } from "../Root";
@@ -32,7 +32,7 @@ const pages = [
 
 export function _NavLink({ name, href }) {
     return (
-        <li className="nav-link" >
+        <li className="nav-link">
             <NavLink
                 to={href}
                 className={({ isActive }) =>
@@ -57,12 +57,21 @@ function LinkThing({ logo, href }) {
 
 export default function AppHead({ active }) {
     const currentBreakPoint = useResponsive(Responsive);
+    /** @type {React.MutableRefObject<HTMLDivElement>} */
+    const drawerRef = useRef();
     const [tabOpen, setTabOpen] = useState(false);
-    console.log(tabOpen);
+
+    document.addEventListener("click", (ev) => {
+        if (currentBreakPoint === "sm") {
+            /** @type {HTMLElement} */
+            const target = ev.target;
+            // TODO: make the drawer when being open close when clicking outside
+        }
+    });
 
     const routes = (
         <ul className={"routes" + " " + currentBreakPoint}>
-            {pages.map(({ displayName, href, discription }, key) => (
+            {pages.map(({ displayName, href }, key) => (
                 <_NavLink
                     name={displayName}
                     href={href}
@@ -99,7 +108,7 @@ export default function AppHead({ active }) {
                             <span></span>
                             <span></span>
                         </button>
-                        <div className={"nav-drawer" + " " + (tabOpen ? "active" : "")}>
+                        <div className={"nav-drawer" + " " + (tabOpen ? "active" : "")} ref={drawerRef}>
                             <div className="head">{logo}</div>
                             <div className="links--">
                                 {routes}
