@@ -46,6 +46,16 @@ export function AccountCard({ photo, github, twitter, reddit, discord }) {
     )
 }
 
+/*
+    here you should add someone to the team as a developer
+    each object contain
+    photo: required string for it to display into the card
+    github: another required string, must contain the user name of the developer to github
+    discord: required string, must contain the discord user name of the developer
+    twitter: optional string, must contain the twitter user name of the developer
+    reddit: optional string, must contain the reddit user name of the developer
+*/
+/** @type {{photo: string, github: string, discord: string, twitter: number | undefined, reddit: number | undefined}[]} */
 const DEVELOPERS = [
     {
         photo: "https://avatars.githubusercontent.com/u/144622489?v=4",
