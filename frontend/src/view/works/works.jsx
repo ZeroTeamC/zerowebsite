@@ -1,20 +1,21 @@
 import "./Works.css"
 import Card from "../../components/Card"
-
+import darb_img from "../../assets/works_photos/darb.png"
+const WORKS = [
+    {
+        image: darb_img,
+        title:"متصفح درب",
+        link:"https://github.com/0xangoone/DARB-browser"
+    }
+]
 export default function Works(){
+    const works = WORKS.map((dev, key) => (
+        <Card {...dev} />
+      ))
     return (
         <div class="body">  
             <div className="card_container">
-
-                <Card image="./card_photos/darb.png" title="darb" link=""/>
-                <Card image="./card_photos/zero.jpg" title="zero os" link=""/>
-                <Card image="./card_photos/potato.jpg" title="potato" link=""/>
-                <Card image="./card_photos/default.png" title="none" link=""/>
-                <Card image="./card_photos/darb.png" title="darb" link=""/>
-                <Card image="./card_photos/zero.jpg" title="zero os" link=""/>
-                <Card image="./card_photos/potato.jpg" title="potato" link=""/>
-                <Card image="./card_photos/default.png" title="none" link=""/>
-
+                {works}
             </div>
         </div>
     )

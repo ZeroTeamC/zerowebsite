@@ -3,6 +3,7 @@ import "./AppHead.css";
 import TeamLogo from "../assets/zero-team-logo.jpg";
 import GithubLogo from "../assets/github-logo-light.png";
 import DiscordLogo from "../assets/discord-logo.png";
+import YoutubeLogo from "../assets/youtube.png";
 
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
@@ -65,7 +66,10 @@ export default function AppHead({ active }) {
         if (currentBreakPoint === "sm") {
             /** @type {HTMLElement} */
             const target = ev.target;
-            // TODO: make the drawer when being open close when clicking outside
+            if (target.className != "nav-btn"){
+                if(tabOpen) setTabOpen(!tabOpen);
+            }
+
         }
     });
 
@@ -83,8 +87,10 @@ export default function AppHead({ active }) {
 
     const links = (
         <ul className="links">
+            <LinkThing logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/1280px-Gmail_icon_%282020%29.svg.png" href="mailto:zeroteamc@gmail.com" />
             <LinkThing logo={GithubLogo} href="https://github.com/ZeroTeamC" />
-            <LinkThing logo={DiscordLogo} href="https://discord.gg/hQXQFdYP" />
+            <LinkThing logo={DiscordLogo} href="https://discord.gg/bm6RUuV5dn" />
+            <LinkThing logo={YoutubeLogo} href="https://youtube.com/@zeroteam-v9v?si=6TMto8TDltwGVVsR"/>
         </ul>
     );
 
