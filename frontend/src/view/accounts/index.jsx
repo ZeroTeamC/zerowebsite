@@ -34,7 +34,7 @@ export function AccountCard({ name, photo, github, twitter, reddit, discord }) {
                         </Then>
                     </If>
                 </div>
-                <h1>{name}</h1>
+                <h1 className="w-full" style={{ textAlign: "right", paddingRight: "0.5rem" }}>{name}</h1>
                 <If condition={discord}>
                     <Then>
                         <span className={classes.account_discord}>

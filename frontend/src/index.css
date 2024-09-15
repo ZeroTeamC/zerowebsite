@@ -84,3 +84,15 @@ code {
 .mainBody {
     color: black;
 }
+
+.rtl {
+    direction: rtl;
+}
+
+.ltr {
+    direction: ltr;
+}
+
+.w-full {
+    width: 100%;
+}
