@@ -27,10 +27,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-      - with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
       - name: Use Node.js ${{ matrix.node-version }}
         working-directory: ./frontend
+        # with:
+        #   node-version: ${{ matrix.node-version }}
+        #   cache: 'npm'
       - run: npm start
       
