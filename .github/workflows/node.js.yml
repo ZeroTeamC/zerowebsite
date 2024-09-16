@@ -26,11 +26,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      - working-directory: ./frontend
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          working-directory: ./frontend
           cache: 'npm'
       - run: npm start
       
