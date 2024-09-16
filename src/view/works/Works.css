@@ -1,0 +1,38 @@
+.card_container{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.card{
+    padding: 7px;
+    width: 300px;
+    height: 375px;
+    background-color: rgb(76, 76, 76);
+    border: 2px solid black;
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px 0px rgb(60, 60, 60);
+    opacity: 0.6;
+    /*filter: blur(2px);*/
+}
+
+.card:hover{
+    opacity: 1;
+    scale: 1.01;
+    filter: blur(0);
+    transition: 0.5s;
+}
+
+.card img{
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 285px;
+    height: 300px;
+}
+
+.card h3{
+    color: rgb(255, 255, 255);
+}

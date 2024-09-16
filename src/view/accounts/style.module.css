@@ -1,0 +1,133 @@
+.body {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 5rem;
+}
+
+.body>heading {
+    --text-size: 0.8rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.7rem;
+    direction: rtl;
+    background-color: #3b3b3b;
+    /* #62ff00a1; */
+    color: snow;
+    /* var(--secondary-text); */
+    gap: 1rem;
+    display: flex;
+    font-size: var(--text-size);
+}
+
+.body>heading a {
+    border-radius: 0.5rem;
+    color: #c2e9ff;
+    text-decoration: none;
+    font-size: var(--text-size);
+}
+
+.body>heading a:hover {
+    text-decoration: underline;
+    transform: none;
+}
+
+.body>div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.body>div h3 {
+    width: 60%;
+    padding: 0 1rem;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    direction: rtl;
+    color: var(--secondary-text);
+}
+
+.h3_sm {
+    font-size: 1.2rem !important;
+    margin: 0 !important;
+    margin-right: auto !important;
+}
+
+.body>div h3::after {
+    content: ":";
+}
+
+.body>div ul {
+    display: flex;
+    gap: 2rem;
+    padding: 0.7rem 1rem;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.body>div ul li {
+    width: 15rem;
+}
+
+.card_photo {
+    width: 100%;
+}
+
+.account_card {
+    border: dashed #222 1px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 2rem #ddd;
+    overflow: hidden;
+}
+
+.account_card span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1111dd;
+    padding: 0 0.1rem;
+}
+
+.account_card .card_links {
+    width: 100%;
+    padding: 0.5rem;
+    padding-top: 0.7rem;
+}
+
+.account_card .card_links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.2rem;
+    transition: all 200ms;
+}
+
+a:hover {
+    transform: scale(1.1);
+}
+
+.account_card .card_links a img {
+    width: 100%;
+}
+
+.links_ {
+    padding: 0 0.7rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+}
