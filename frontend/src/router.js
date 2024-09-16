@@ -9,7 +9,7 @@ const AboutPage = lazy(() => import("./pages/About.jsx"))
 
 export const router = createBrowserRouter([
     {
-        path: "/",
+        path: "zerowebsite//",
         element: <Root />,
         children: [
             {
