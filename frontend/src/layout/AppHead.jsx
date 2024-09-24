@@ -66,10 +66,9 @@ export default function AppHead({ active }) {
         if (currentBreakPoint === "sm") {
             /** @type {HTMLElement} */
             const target = ev.target;
-            if (target.className != "nav-btn"){
-                if(tabOpen) setTabOpen(!tabOpen);
+            if (target.tagName === "NAV") {
+                if (tabOpen) setTabOpen(!tabOpen);
             }
-
         }
     });
 

@@ -133,6 +133,15 @@ const DEVELOPERS = [
         name: "ايوب",
         github: "1dev1a",
         discord: "ayoub.dev134_35426"
+    },{
+        photo: "https://avatars.githubusercontent.com/u/182334766?v=4",
+        name:"0xh7",
+        github:"https://github.com/0xh7",
+        discord:"",
+    },{
+        photo:"https://avatars.githubusercontent.com/u/163455308?v=4",
+        name:"ودادي",
+        github:"https://github.com/falcowidadi"
     }
 ]
 
